@@ -18,7 +18,7 @@ public class Week03
         System.out.println();
 
         Student ravleen = new Student(22045363,"ravleen");
-        
+        ravleen.print();
 
         Student Simran = new Student(22045890, "Simran");
         Simran.print();
@@ -26,7 +26,7 @@ public class Week03
         Student Aashish = new Student(22014533, "Aashish");
         Aashish.print();
 
-        Course Computing = new Course("BTCG,", "Computing");
+        Course Computing = new Course("BTCG", "Computing");
         Computing.print();
         
 

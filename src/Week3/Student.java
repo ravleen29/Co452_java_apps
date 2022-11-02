@@ -11,8 +11,8 @@ public class Student {
     }
     public void print()
     {
-        System.out.print("ID: " + this.id);
-        System.out.println("Name: " + this.name);
+        System.out.println("ID:" + this.id);
+        System.out.println("Name:" + this.name);
     }
     
 }
