@@ -12,7 +12,7 @@ public class App
         System.out.println("Welcome to musica");
         System.out.println("Songs added into the list.");
 
-        Songs r1 = new Songs("Compro", "Gurnam", 102000);                
+        Songs r1 = new Songs("Compro",  "Gurnam", 102000);                
         r1.print();
         Songs r2 = new Songs("On_hunt", "Shivjot", 6000000);                
         r2.print();
@@ -30,16 +30,16 @@ public class App
         r8.print();
         Songs r9 = new Songs("Detail", "Amrit_Maan", 240000);                
         r9.print();
-        Songs Psycho = new Songs("Psycho", "Anne_marie", 7200000);                
-        Psycho.print();
-        Songs r10 = new Songs("Bones", "Imagine_Dragons", 1200000);                
+        Songs r10 = new Songs("Psycho", "Anne_marie", 7200000);                
         r10.print();
-        Songs r11 = new Songs("Balle_Jatta", "Diljit_Dosanjh", 5700000);                
+        Songs r11 = new Songs("Bones", "Imagine_Dragons", 1200000);                
         r11.print();
-        Songs r12 = new Songs("New_Rules", "Dua_Lipa", 270000000);                
+        Songs r12 = new Songs("Balle_Jatta", "Diljit_Dosanjh", 5700000);                
         r12.print();
-        Songs r13 = new Songs("Calm_Down", "Selena_Gomez", 2800000);                
+        Songs r13 = new Songs("New_Rules", "Dua_Lipa", 270000000);                
         r13.print();
+        Songs r14 = new Songs("Calm_Down", "Selena_Gomez", 2800000);                
+        r14.print();
                        
         
         ArrayList<Songs> Song = new ArrayList<Songs>(20);
@@ -47,7 +47,6 @@ public class App
         Song.add(r2);
         Song.add(r3);
         Song.add(r4);
-        Song.add(r5);
         Song.add(r5);
         Song.add(r6);
         Song.add(r7);
@@ -57,19 +56,8 @@ public class App
         Song.add(r11);
         Song.add(r12);
         Song.add(r13);
+        Song.add(r14);
         
-        
-        //String name = InputReader.getString("Enter the name of a song to remove.");
-        //for(Songs current : Song)
-        {
-            //if(name.equals( current.getName())) 
-            {
-                
-              //  Song.remove(current);
-               // System.out.println("Successfully removed the song!");
-                
-            }
-        }
         System.out.println(Song.get(1));
         Song.remove(r1);
         System.out.println("Song removed!");
@@ -81,16 +69,36 @@ public class App
         }
 
         Scanner music = new Scanner(System.in);
-        System.out.println("Enter playcount to find a song.");
+        System.out.println("Enter playcount to create a list of songs which have more number of plays than the given playcount.");
 
         int Plays = music.nextInt();
-        System.out.println("Here is the song you were looking for!");
+        System.out.println("Here is the list of songs you were looking for!");
 
         for(Songs song : Song)
-        {if(Plays == song.getPlays())
+        {if(Plays < song.getPlays())
         {
             song.print();
-        }}
+        } 
+        }
+
+        try (Scanner choose = new Scanner(System.in)) {
+            System.out.println("Enter playcount to search for a song.");
+
+            int Playcounts = choose.nextInt();
+        }
+        System.out.println("The songs you were looking for is:");
+
+        for(Songs song : Song)
+        {if(Plays == song.getPlaycounts())
+        {
+            song.print();
+        } 
+        }
+        
+        
+        
+
+
 
         
 
