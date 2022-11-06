@@ -14,9 +14,9 @@ public class Songs {
 
     public void print()
     {
-        System.out.print("Song: " + this.Song_Title);
-        System.out.print(" Artist: " + this.Artist_Name );
-        System.out.println(" Plays: " + this.Plays);
+        System.out.print("Song: " + this.Song_Title + "\t");
+        System.out.print(" Artist: " +  this.Artist_Name +"\t");
+        System.out.println(" Plays: " +  this.Plays );
     
     }
 
@@ -25,6 +25,10 @@ public class Songs {
     }
     public int getPlays(){
         return this.Plays;
+    }
+    public int getPlaycounts(){
+        return this.Plays;
+
     }
     
    
