@@ -1,3 +1,5 @@
+
+
 public class Songs {
     private String Song_Title;
     private String Artist_Name;
@@ -21,7 +23,12 @@ public class Songs {
     public String getName(){
         return this.Song_Title;
     }
-
+    public int getPlays(){
+        return this.Plays;
+    }
+    
+   
+    
     
     
 }
